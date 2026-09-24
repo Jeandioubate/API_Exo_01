@@ -20,3 +20,18 @@ Le programme affiche :
 response = requests.get(
     "http://api.open-notify.org/iss-now.json"
 )
+
+# Conversion de la réponse JSON de l'API en dictionnaire Python.
+data = response.json()
+
+print("=== STATION SPATIALE INTERNATIONALE ===")
+print()
+print("Position de l'ISS :")
+
+# Récupération de la latitude et de la longitude
+latitude = data["iss_position"]["latitude"]
+longitude = data["iss_position"]["longitude"]
+
+# Affichage de la latitude et de la longitude
+print("Latitude :", latitude)
+print("Longitude :", longitude)
