@@ -65,3 +65,18 @@ rep = requests.get(
 )
 
 data_name = rep.json() # Conversion de la réponse JSON en dico Python
+
+# Récupération du nombre d'occupants
+number = data_name["number"]
+
+print()
+
+# Affichage du nombre d'occupants
+print("Nombre d'occupants :", number)
+
+# Récupération de la liste des personnes présentes dans l'espace
+#
+# ["people"] contient une liste de dictionnaires. Chaque dictionnaire correspond à une personne.
+people = data_name["people"]
+
+print()
