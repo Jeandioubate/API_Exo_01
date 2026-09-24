@@ -35,3 +35,26 @@ longitude = data["iss_position"]["longitude"]
 # Affichage de la latitude et de la longitude
 print("Latitude :", latitude)
 print("Longitude :", longitude)
+
+# Récupération de "timestamp"
+timestamp = data["timestamp"]
+
+print()
+
+# Affichage de "timestamp"
+print("Timestamp :", timestamp)
+
+# Conversion du timestamp en date
+#
+# datetime.datetime.fromtimestamp() transforme le timestamp en un objet datetime.
+#
+# "timestamp" représente le nombre de secondes écoulées depuis le 1er janvier 1970.
+#
+# datetime.timezone.utc indique que nous voulons obtenir la date et l'heure en UTC.
+
+date_utc = datetime.datetime.fromtimestamp(timestamp, tz=datetime.timezone.utc)
+
+print()
+
+# Affichage de la date et l'heure correspondant au timestamp
+print("Date :", date_utc)
