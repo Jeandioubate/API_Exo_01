@@ -80,3 +80,13 @@ print("Nombre d'occupants :", number)
 people = data_name["people"]
 
 print()
+
+# Affiche le titre de la liste des occupants.
+print("Occupants :")
+
+# Récupération et affichage des noms des occupants
+#
+for person in people: # On parcourt chaque personne présente dans la liste people
+
+    # On récupère le nom de la personne avec ["name"] et on l'affiche dans la console.
+    print(" - Nom :", person["name"])
