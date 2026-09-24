@@ -58,3 +58,10 @@ print()
 
 # Affichage de la date et l'heure correspondant au timestamp
 print("Date :", date_utc)
+
+# Récupération des données concernant les personnes présentes actuellement dans l'espace
+rep = requests.get(
+    "http://api.open-notify.org/astros.json"
+)
+
+data_name = rep.json() # Conversion de la réponse JSON en dico Python
